@@ -7,6 +7,6 @@ int main(void) {
   cout << "Hello, Jenkins\n";
   cout << "I have successfully built and run\n";
   cout << "Added web hook";
-  cout << "test7";
+  cout << "test8";
   return 0;
 }
