@@ -16,10 +16,10 @@ pipeline {
                 sh './hello_exec'
             }
         }
-        post {
-            failure {
-                echo 'Pipeline Failed'
-            }
+    }
+    post {
+        failure {
+            echo 'Pipeline Failed'
         }
     }
 }
