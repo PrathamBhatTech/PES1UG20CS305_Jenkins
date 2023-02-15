@@ -9,7 +9,7 @@ pipeline
             steps
             {
                 sh 'g++ hello.cpp'
-                sh '/var/jenkins_home/workspace/PES1UG20CS305-1/main/hello_exec'
+                sh '/var/jenkins_home/workspace/PES1UG20CS305_Jenkinsfile/main/hello_exec'
                 echo 'Build Stage Successful'
             }
         }
