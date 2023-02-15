@@ -17,7 +17,7 @@ pipeline
         {
             steps
             {   
-                sh './a.ou'
+                sh './a.out'
                 echo 'Output from cpp file'
             }
         }
@@ -27,6 +27,11 @@ pipeline
             {
                 echo 'Deploying...'
             }
+        }
+    }
+    post    {
+        faliure {
+            echo 'Pipeline Failed'
         }
     }
 }
