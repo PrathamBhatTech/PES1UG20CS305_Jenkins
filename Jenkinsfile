@@ -30,7 +30,7 @@ pipeline
         }
     }
     post    {
-        faliure {
+        failure {
             echo 'Pipeline Failed'
         }
     }
