@@ -1,23 +1,25 @@
 pipeline {
-    agent any
     stages {
+        stage('Clone repository') {
+            steps {
+                git branch: 'main',
+                url: 'https://github.com/PrathamBhatTech/PES1UG20CS305_Jenkins.git'
+            }
+        }
         stage('Build') {
             steps {
-                sh 'g++ -o ${env.BUILD_ID} hello.cpp'
+                sh 'make -C main'
             }
         }
         stage('Test') {
             steps {
-                sh './${env.BUILD_ID}'
+                sh './hello_exec'
             }
         }
-    }
-    post {
-        always {
-            echo "Pipeline complete"
-        }
-        failure {
-            echo "Pipeline failed"
+        post {
+            failure {
+                echo 'Pipeline Failed'
+            }
         }
     }
 }
